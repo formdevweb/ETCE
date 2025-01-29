@@ -1,0 +1,15 @@
+/* Styles pour le menu mobile */
+#mobile-menu {
+    background-color: #2C2C2C; /* Gris Anthracite */
+    padding: 1rem;
+    border-top: 1px solid #0047AB; /* Bleu Technologie */
+  }
+  
+  #mobile-menu a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  #mobile-menu a:hover {
+    color: #FFC107; /* Jaune Énergétique */
+  }

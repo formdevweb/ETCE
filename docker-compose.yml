@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Service pour le frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - etce-network
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+  # Service pour le backend
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_DB: etce_db
+    depends_on:
+      - db
+    networks:
+      - etce-network
+
+  # Service pour la base de données MySQL
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: etce_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - etce-network
+
+# Volumes pour persister les données de la base de données
+volumes:
+  mysql-data:
+
+# Réseau pour connecter les services
+networks:
+  etce-network:
