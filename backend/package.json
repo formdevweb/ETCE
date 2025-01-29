@@ -1,0 +1,14 @@
+{
+    "name": "mon-projet",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "install-dependencies": "npm install",
+      "build": "npm install && npm run build"  
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
