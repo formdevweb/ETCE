@@ -1,193 +1,300 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ETCE Ingénierie - Contact</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="../src/output.css" rel="stylesheet">
-  <script src="../script.js" defer></script>
-  <!-- Icônes FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-900 font-montserrat">
-  <!-- Header -->
-  <header class="bg-blue-900 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <img src="assets/Accueil/logo1.webp" alt="ETCE Ingénierie" class="w-20 h-20 scale-x-40 scale-y-20 transform rounded-full">
-        <span class="ml-2 text-xl font-bold">Etce ingénierie</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETCE Ingénierie - Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="../src/output.css" rel="stylesheet" />
+    <script src="../script.js" defer></script>
+    <!-- Icônes FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-montserrat">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="assets/Accueil/logo1.webp"
+            alt="ETCE Ingénierie"
+            class="w-20 h-20 scale-x-40 scale-y-20 transform rounded-full"
+          />
+          <span class="ml-2 text-xl font-bold">Etce ingénierie</span>
+        </div>
+        <!-- Menu Burger (visible sur mobile) -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+        <!-- Navigation (cachée sur mobile, visible sur desktop) -->
+        <nav id="menu" class="hidden md:flex space-x-6">
+          <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+          <a href="services.html" class="hover:text-yellow-400">Services</a>
+          <a href="about.html" class="hover:text-yellow-400">À propos</a>
+          <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        </nav>
       </div>
-      <!-- Menu Burger (visible sur mobile) -->
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-      <!-- Navigation (cachée sur mobile, visible sur desktop) -->
-      <nav id="menu" class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-yellow-400">Accueil</a>
-        <a href="services.html" class="hover:text-yellow-400">Services</a>
-        <a href="about.html" class="hover:text-yellow-400">À propos</a>
-        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-      </nav>
-    </div>
-    <!-- Menu Mobile (caché par défaut) -->
-    <div id="mobile-menu" class="md:hidden hidden mt-4">
-      <a href="index.html" class="block py-2 hover:text-yellow-400">Accueil</a>
-      <a href="services.html" class="block py-2 hover:text-yellow-400">Services</a>
-      <a href="about.html" class="block py-2 hover:text-yellow-400">À propos</a>
-      <a href="contact.html" class="block py-2 hover:text-yellow-400">Contact</a>
-    </div>
-  </header>
+      <!-- Menu Mobile (caché par défaut) -->
+      <div id="mobile-menu" class="md:hidden hidden mt-4">
+        <a href="index.html" class="block py-2 hover:text-yellow-400"
+          >Accueil</a
+        >
+        <a href="services.html" class="block py-2 hover:text-yellow-400"
+          >Services</a
+        >
+        <a href="about.html" class="block py-2 hover:text-yellow-400"
+          >À propos</a
+        >
+        <a href="contact.html" class="block py-2 hover:text-yellow-400"
+          >Contact</a
+        >
+      </div>
+    </header>
 
-
-  <!-- Section Contact -->
-  <section class="py-16">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Contactez-nous</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Informations de Contact -->
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-bold mb-6">Informations de Contact</h3>
-          <div class="space-y-4">
-            <!-- Adresse -->
-            <div class="flex items-center">
-              <i class="fas fa-map-marker-alt text-blue-900 mr-4"></i>
-              <p>123 Rue de l'Innovation, 75001 Paris, France</p>
+    <!-- Section Contact -->
+    <section class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Contactez-nous</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Informations de Contact -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-6">Informations de Contact</h3>
+            <div class="space-y-4">
+              <!-- Adresse -->
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt text-blue-900 mr-4"></i>
+                <p>123 Rue de l'Innovation, 75001 Paris, France</p>
+              </div>
+              <!-- Téléphone -->
+              <div class="flex items-center">
+                <i class="fas fa-phone text-blue-900 mr-4"></i>
+                <p>+33 1 23 45 67 89</p>
+              </div>
+              <!-- Email -->
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-blue-900 mr-4"></i>
+                <p>contact@etce-ingenierie.com</p>
+              </div>
             </div>
-            <!-- Téléphone -->
-            <div class="flex items-center">
-              <i class="fas fa-phone text-blue-900 mr-4"></i>
-              <p>+33 1 23 45 67 89</p>
-            </div>
-            <!-- Email -->
-            <div class="flex items-center">
-              <i class="fas fa-envelope text-blue-900 mr-4"></i>
-              <p>contact@etce-ingenierie.com</p>
+            <!-- Horaires -->
+            <div class="mt-6">
+              <h4 class="text-xl font-bold mb-2">Horaires d'ouverture</h4>
+              <p>Lundi - Vendredi : 9h00 - 18h00</p>
+              <p>Samedi - Dimanche : Fermé</p>
             </div>
           </div>
-          <!-- Horaires -->
-          <div class="mt-6">
-            <h4 class="text-xl font-bold mb-2">Horaires d'ouverture</h4>
-            <p>Lundi - Vendredi : 9h00 - 18h00</p>
-            <p>Samedi - Dimanche : Fermé</p>
+
+          <!-- Formulaire de Contact -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+            <form id="contactForm" class="space-y-4">
+              <!-- Nom -->
+              <div>
+                <label for="name" class="block text-gray-700">Nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full p-2 border border-gray-300 rounded-lg"
+                  required
+                />
+              </div>
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-gray-700">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full p-2 border border-gray-300 rounded-lg"
+                  required
+                />
+              </div>
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-gray-700">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full p-2 border border-gray-300 rounded-lg"
+                  required
+                ></textarea>
+              </div>
+              <!-- Bouton Envoyer -->
+              <button
+                type="submit"
+                class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500"
+              >
+                Envoyer
+              </button>
+              <div id="response"></div>
+            </form>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Formulaire de Contact -->
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
-          <form id="contact-form" class="space-y-4">
-            <!-- Nom -->
-            <div>
-              <label for="name" class="block text-gray-700">Nom</label>
-              <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg" required>
-            </div>
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-gray-700">Email</label>
-              <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg" required>
-            </div>
-            <!-- Message -->
-            <div>
-              <label for="message" class="block text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="5" class="w-full p-2 border border-gray-300 rounded-lg" required></textarea>
-            </div>
-            <!-- Bouton Envoyer -->
-            <button type="submit" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500">Envoyer</button>
-          </form>
+    <!-- Carte Google Maps -->
+    <section class="bg-gray-200 py-16">
+      <div class="container mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-8">Où nous trouver</h3>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20330.72640059597!2d3.011780950900702!3d50.43475244893278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2cdaaf1b773c5%3A0x40af13e8163f140!2s%C3%89vin-Malmaison!5e0!3m2!1sfr!2sfr!4v1738680657749!5m2!1sfr!2sfr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Carte Google Maps -->
-  <section class="bg-gray-200 py-16">
-    <div class="container mx-auto">
-      <h3 class="text-2xl font-bold text-center mb-8">Où nous trouver</h3>
-      <div class="rounded-lg overflow-hidden shadow-lg">
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20330.72640059597!2d3.011780950900702!3d50.43475244893278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2cdaaf1b773c5%3A0x40af13e8163f140!2s%C3%89vin-Malmaison!5e0!3m2!1sfr!2sfr!4v1738680657749!5m2!1sfr!2sfr"
-          width="100%"
-          height="400"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
-  </section>
+    <!-- FAQ Section -->
+    <section class="py-16">
+      <div class="container mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-8">
+          Questions fréquentes
+        </h3>
+        <div id="faq-container" class="space-y-4">
+          <!-- Question 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">Comment puis-je vous contacter ?</h4>
+            <p class="mt-2">
+              Vous pouvez nous contacter par téléphone, email ou via le
+              formulaire de contact ci-dessus.
+            </p>
+          </div>
+          <!-- Question 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Quels sont vos horaires d'ouverture ?
+            </h4>
+            <p class="mt-2">
+              Nous sommes ouverts du lundi au vendredi, de 9h00 à 18h00.
+            </p>
+          </div>
+        </div>
+        <!-- Load More Button -->
+        <div class="text-center mt-4">
+          <button
+            id="load-more-btn"
+            class="px-6 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600"
+          >
+            Afficher plus
+          </button>
+          <button
+            id="load-less-btn"
+            class="px-6 py-2 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 hidden"
+          >
+            Afficher moins
+          </button>
+        </div>
 
-  <!-- FAQ Section -->
-<section class="py-16">
-  <div class="container mx-auto">
-    <h3 class="text-2xl font-bold text-center mb-8">Questions fréquentes</h3>
-    <div id="faq-container" class="space-y-4">
-      <!-- Question 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Comment puis-je vous contacter ?</h4>
-        <p class="mt-2">Vous pouvez nous contacter par téléphone, email ou via le formulaire de contact ci-dessus.</p>
+        <!-- Hidden Questions -->
+        <div id="hidden-questions" style="display: none">
+          <!-- Question 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">Où se trouve votre bureau ?</h4>
+            <p class="mt-2">
+              Notre bureau est situé au 123 Rue de l'Innovation, 75001 Paris,
+              France.
+            </p>
+          </div>
+          <!-- Question 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Est-il possible de prendre rendez-vous en ligne ?
+            </h4>
+            <p class="mt-2">
+              Oui, vous pouvez réserver un rendez-vous directement sur notre
+              site web en utilisant le calendrier disponible dans la section
+              "Rendez-vous".
+            </p>
+          </div>
+          <!-- Question 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Quelle est la politique de confidentialité pour les données
+              personnelles ?
+            </h4>
+            <p class="mt-2">
+              Nous respectons strictement la confidentialité de vos données. Vos
+              informations sont protégées conformément au RGPD et ne sont
+              partagées qu'avec votre consentement explicite.
+            </p>
+          </div>
+          <!-- Question 6 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Combien de temps faut-il pour obtenir une réponse après avoir
+              envoyé un message ?
+            </h4>
+            <p class="mt-2">
+              Nous répondons généralement aux messages dans un délai de 24 à 48
+              heures ouvrables. En cas d'urgence, veuillez utiliser notre numéro
+              de téléphone.
+            </p>
+          </div>
+          <!-- Question 7 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Y a-t-il des frais supplémentaires pour les services
+              internationaux ?
+            </h4>
+            <p class="mt-2">
+              Pour les services internationaux, des frais supplémentaires
+              peuvent s'appliquer en fonction du pays et du type de service.
+              Contactez-nous pour plus de détails.
+            </p>
+          </div>
+          <!-- Question 8 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold">
+              Puis-je annuler un rendez-vous sans frais ?
+            </h4>
+            <p class="mt-2">
+              Oui, vous pouvez annuler gratuitement jusqu'à 24 heures avant le
+              rendez-vous. Au-delà de ce délai, des frais d'annulation peuvent
+              être appliqués.
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- Question 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Quels sont vos horaires d'ouverture ?</h4>
-        <p class="mt-2">Nous sommes ouverts du lundi au vendredi, de 9h00 à 18h00.</p>
-      </div>
-    </div>
-    <!-- Load More Button -->
-    <div class="text-center mt-4">
-      <button id="load-more-btn" class="px-6 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600">Afficher plus</button>
-      <button id="load-less-btn" class="px-6 py-2 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 hidden">Afficher moins</button>
-    </div>
+    </section>
 
-    <!-- Hidden Questions -->
-    <div id="hidden-questions" style="display: none;">
-      <!-- Question 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Où se trouve votre bureau ?</h4>
-        <p class="mt-2">Notre bureau est situé au 123 Rue de l'Innovation, 75001 Paris, France.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 ETCE Ingénierie. Tous droits réservés.</p>
+        <div class="mt-4 space-x-4">
+          <a href="#" class="text-yellow-400 hover:text-yellow-500">Facebook</a>
+          <a href="#" class="text-yellow-400 hover:text-yellow-500">LinkedIn</a>
+          <a href="#" class="text-yellow-400 hover:text-yellow-500">Twitter</a>
+        </div>
       </div>
-      <!-- Question 4 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Est-il possible de prendre rendez-vous en ligne ?</h4>
-        <p class="mt-2">Oui, vous pouvez réserver un rendez-vous directement sur notre site web en utilisant le calendrier disponible dans la section "Rendez-vous".</p>
-      </div>
-      <!-- Question 5 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Quelle est la politique de confidentialité pour les données personnelles ?</h4>
-        <p class="mt-2">Nous respectons strictement la confidentialité de vos données. Vos informations sont protégées conformément au RGPD et ne sont partagées qu'avec votre consentement explicite.</p>
-      </div>
-      <!-- Question 6 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Combien de temps faut-il pour obtenir une réponse après avoir envoyé un message ?</h4>
-        <p class="mt-2">Nous répondons généralement aux messages dans un délai de 24 à 48 heures ouvrables. En cas d'urgence, veuillez utiliser notre numéro de téléphone.</p>
-      </div>
-      <!-- Question 7 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Y a-t-il des frais supplémentaires pour les services internationaux ?</h4>
-        <p class="mt-2">Pour les services internationaux, des frais supplémentaires peuvent s'appliquer en fonction du pays et du type de service. Contactez-nous pour plus de détails.</p>
-      </div>
-      <!-- Question 8 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-bold">Puis-je annuler un rendez-vous sans frais ?</h4>
-        <p class="mt-2">Oui, vous pouvez annuler gratuitement jusqu'à 24 heures avant le rendez-vous. Au-delà de ce délai, des frais d'annulation peuvent être appliqués.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2023 ETCE Ingénierie. Tous droits réservés.</p>
-      <div class="mt-4 space-x-4">
-        <a href="#" class="text-yellow-400 hover:text-yellow-500">Facebook</a>
-        <a href="#" class="text-yellow-400 hover:text-yellow-500">LinkedIn</a>
-        <a href="#" class="text-yellow-400 hover:text-yellow-500">Twitter</a>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
