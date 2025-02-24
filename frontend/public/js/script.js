@@ -3,14 +3,21 @@
 // ===============================================
 
 // Gestion du menu mobile
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
+document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-}
+      // Ajoutez un gestionnaire d'événements pour les liens du menu mobile
+      const mobileLinks = document.querySelectorAll("#mobile-menu a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.add("hidden"); // Ferme le menu après le clic
+        });
+      });
 
 // ===============================================
 // PAGE CONTACT
